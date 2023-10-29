@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verification</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <form action="/verify" method="POST">
+        <label for="otp">OTP:</label>
+        <input type="text" name="otp" id="otp" required>
+        <input type="hidden" name="number" value="{{ request.form.number }}">
+        <button type="submit">Verify</button>
+    </form>
+</body>
+</html>
