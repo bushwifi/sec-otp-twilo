@@ -7,9 +7,9 @@ app = Flask(__name__, template_folder='templets/')
 # Set environment variables for your credentials
 # Read more at http://twil.io/secure
 
-account_sid = "AC86e371ddb531ed36c48437f22b6d0de7"  # Twilio account SID
-auth_token = "698422c20a02b9f5f202a674a7c874e0"  # Twilio auth token
-verify_sid = "VA23cbd8804e41adf609c666710d0146c6"  # SID of the Twilio verification service
+account_sid = ""  # Twilio account SID
+auth_token = ""  # Twilio auth token
+verify_sid = ""  # SID of the Twilio verification service
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
